@@ -1,21 +1,24 @@
  var React = require('react');
- import './styles.css';
- var ReactDom = require('react-dom');
 
  class Header extends React.Component {
- 	constructor() {
- 		super();
- 		this.state={
- 			data:"inside header data"
- 		}
- 	}
-  render()
-  {
-  	return (<div style={{"height":"60", "border":"1px solid"}}>
-  		<h2 style={{"color":"purple", "text-align":"left","margin":"20px"}}>URBAN PIPER</h2>
-  		</div>)
-  }
 
- }
+         render() {
+             return ( < div style = {
+                     {
+                         "border": "1px solid #ccc",
+                         "height": "50px",
+                         "width": "800px"
+                     }
+                 }>
+                 <p style = {
+                     {
+                         "margin": "15px 0px 0px 25px",
+                         "font-family": "sans-serif"
+                     }
+                 } > My Cart(3) </p>
+                  </div>)
+             }
 
- export default Header;
+         }
+
+export default Header;
