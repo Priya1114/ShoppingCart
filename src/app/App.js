@@ -35,14 +35,7 @@ class App extends React.Component {
         }
 
         render() {
-            return ( < div style = {
-                    {
-                        "border": "1px solid #ccc",
-                        "height": "800px",
-                        "width": "800px",
-                        "margin": "auto"
-                    }
-                } >
+            return ( < div style = {{"border": "1px solid #ccc","height": "800px","width": "800px","margin": "auto"}} >
                 <Header / >
                 <Product data = {this.data1}/>
                 <hr></hr> 
