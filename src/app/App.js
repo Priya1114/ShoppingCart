@@ -8,6 +8,12 @@ import Product from './Product.js';
 class App extends React.Component {
         constructor(props) {
             super(props);
+                this.state = {
+                   isHidden1: false,
+                   isHidden2: false,
+                   isHidden3: false,
+                   value: 3
+                }
             this.data1 = {
                 "id": "item1",
                 "name": "Moto G5 Plus(16 GB)",
@@ -33,15 +39,43 @@ class App extends React.Component {
                 "seller": "TrueComRetail"
             }
         }
+        // componentDidMount() {
+        //     if(this.state.isHidden1 && this.state.isHidden2 && this.state.isHidden3)
+        //     {
+        //         this.setState({
+        //           value : 1
+        //         })
+                
+        //     }
+        // }
+        remove1() {
+            console.log("remove function");
+                this.setState({
+                  isHidden1: !this.state.isHidden1
+                })
+        }
+        remove2() {
+            console.log("remove function");
+                this.setState({
+                  isHidden2: !this.state.isHidden2
+                })
+        }
+        remove3() {
+            console.log("remove function");
+                this.setState({
+                  isHidden3: !this.state.isHidden3
+                })
+        }
+
 
         render() {
             return ( < div style = {{"border": "1px solid #ccc","height": "800px","width": "800px","margin": "auto"}} >
-                <Header / >
-                <Product data = {this.data1}/>
+                <Header data={this.state} />
+                { !this.state.isHidden1 && < Product  onClick = {this.remove1.bind(this)} data = {this.data1}/>}
                 <hr></hr> 
-                <Product data = {this.data2}/>
+                { !this.state.isHidden2 && < Product  onClick = {this.remove2.bind(this)} data = {this.data2}/>}
                  <hr></hr>
-                <Product data = {this.data3}/>
+                { !this.state.isHidden3 && < Product  onClick = {this.remove3.bind(this)} data = {this.data3}/>}
                 <Footer/>
                 </div>)
             }

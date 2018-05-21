@@ -124,7 +124,7 @@ class Product extends React.Component {
                         "margin": "10px 10px 10px 0px"
                     }
                 }>
-                <h4> Remove </h4> 
+                <h4 onClick = {this.props.onClick} > Remove </h4> 
                 </div>
                 </div>
                 </div>)

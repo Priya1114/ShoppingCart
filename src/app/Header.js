@@ -15,7 +15,7 @@
                          "margin": "15px 0px 0px 25px",
                          "font-family": "sans-serif"
                      }
-                 } > My Cart(3) </p>
+                 } > My Cart({this.props.data.value}) </p>
                   </div>)
              }
 
